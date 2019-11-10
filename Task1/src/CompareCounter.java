@@ -1,3 +1,7 @@
+/**
+ * @author alisher
+ * @project Task1
+ */
 public class CompareCounter {
     private int count = 0;
 

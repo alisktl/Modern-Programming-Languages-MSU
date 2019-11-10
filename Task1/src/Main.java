@@ -1,6 +1,10 @@
 import java.io.*;
 import java.util.Arrays;
 
+/**
+ * @author alisher
+ * @project Task1
+ */
 public class Main {
     public static void main(String args[]) {
         try {

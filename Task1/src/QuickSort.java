@@ -1,6 +1,11 @@
 import java.util.Random;
 
 /**
+ * @author alisher
+ * @project Task1
+ */
+
+/**
  * QuickSort с дополнениями:
  * 1. 3-частное разбиение
  * 2. один рекурсивный вызов вместо двух

@@ -1,3 +1,7 @@
+/**
+ * @author alisher
+ * @project Task1
+ */
 public class Worker implements Comparable<Worker> {
 
     private int salary;

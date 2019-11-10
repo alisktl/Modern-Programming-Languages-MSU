@@ -1,3 +1,7 @@
+/**
+ * @author alisher
+ * @project Task1
+ */
 public class InsertionSort {
 
     public static void sort(Comparable[] a, int low, int high) {
