@@ -48,10 +48,10 @@ public class QuickSort {
                 // рекурсивная оптимизация
                 if (lt - low < high - gt) {
                     quickSortThreeWay(a, low, lt - 1);
-                    low = lt + 1;
+                    low = gt + 1;
                 } else {
                     quickSortThreeWay(a, gt + 1, high);
-                    high = gt - 1;
+                    high = lt - 1;
                 }
             }
         }

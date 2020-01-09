@@ -8,22 +8,26 @@ import java.util.Arrays;
 public class Main {
     public static void main(String args[]) {
         try {
-            CompareCounter compareCounter = new CompareCounter();
+            CompareCounter compareCounter1 = new CompareCounter();
+            CompareCounter compareCounter2 = new CompareCounter();
 
-            String fileName = "input1000.txt";
+            String fileName = "input10000000.txt";
 
-            Worker[] workers = readFile(fileName, compareCounter);
+            Worker[] workers1 = readFile(fileName, compareCounter1);
+            Worker[] workers2 = readFile(fileName, compareCounter2);
 
-            QuickSort.sort(workers);
-            System.out.printf("Количество сравнений QuickSort: %d\n", compareCounter.getCount());
+            QuickSort.sort(workers1);
+            System.out.printf("Количество сравнений QuickSort: %d\n", compareCounter1.getCount());
 
-            compareCounter.reset();
+            Arrays.sort(workers2);
+            System.out.printf("Количество сравнений Arrays.sort: %d\n", compareCounter2.getCount());
 
-            workers = null;
-            workers = readFile(fileName, compareCounter);
-
-            Arrays.sort(workers);
-            System.out.printf("Количество сравнений Arrays.sort: %d\n", compareCounter.getCount());
+            for (int i = 0; i < workers1.length; i++) {
+                if (workers1[i].getSalary() != workers2[i].getSalary()) {
+                    System.out.println("Different sorted outputs");
+                    break;
+                }
+            }
         } catch (Exception e) {
             System.out.print("Exception: " + e.toString());
         }
