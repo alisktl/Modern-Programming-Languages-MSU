@@ -171,7 +171,7 @@ public class Solver {
         public State(Board board, int moves, State previousState) {
             this.board = board;
             this.moves = moves;
-            priority = a * moves + b * board.manhattan();
+            priority = a * board.manhattan() + b * moves;
             this.previousState = previousState;
         }
 
